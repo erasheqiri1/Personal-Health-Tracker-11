@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 export default function Dashboard() {
   return (
     <View style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
-      <Text style={{ fontSize:18, fontWeight:'600' }}>Dashboa444444444444</Text>
+      <Text style={{ fontSize:18, fontWeight:'600' }}>dashboard per testim</Text>
     </View>
   );
 }
