@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 // export const unstable_settings = { 
 //   headerShown: false, 
 //   tabBarStyle: { display: "none" } 
 // };
+=======
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+export const unstable_settings = { 
+  headerShown: false, 
+  tabBarStyle: { display: "none" } 
+};
+>>>>>>> c5bff4695c1646389c1fce4b31d95ce9c786191f
 
 // import React, { useState } from "react";
 // import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from "react-native";
@@ -17,6 +26,7 @@
 //   const [pesha, setPesha] = useState("");
 //   const [gjatesia, setGjatesia] = useState("");
 
+<<<<<<< HEAD
 //   const handleSignUp = () => {
 //     console.log("User registered:", { emri, mbiemri, emaili, fjalkalimi, ditelindja, pesha, gjatesia });
 //     router.push("/(tabs)/login");
@@ -25,6 +35,56 @@
 //   return (
 //     <View style={styles.container}>
 //       <Image source={require("../../assets/logo.jpg")} style={styles.logo} />
+=======
+ const handleSignUp = async () => {
+  if (!emri || !mbiemri || !emaili || !fjalkalimi) {
+    alert("Ju lutem plotësoni të gjitha fushat!");
+    return;
+  }
+
+  // Krijo objektin e përdoruesit të ri
+  const newUser = {
+    emri,
+    mbiemri,
+    emaili,
+    fjalkalimi,
+    ditelindja,
+    pesha,
+    gjatesia,
+  };
+
+  try {
+    // Merr listën ekzistuese të përdoruesve
+    const existingUsers = JSON.parse((await AsyncStorage.getItem("users")) || "[]");
+
+    // Shto përdoruesin e ri
+    existingUsers.push(newUser);
+
+    // Ruaji të gjithë përdoruesit në AsyncStorage
+    await AsyncStorage.setItem("users", JSON.stringify(existingUsers));
+
+    //  Ruaj përdoruesin që u regjistrua si përdorues aktual
+    await AsyncStorage.setItem("currentUser", JSON.stringify(newUser));
+
+    console.log("User registered:", newUser);
+    
+    
+     // Brenda handleSignUp:
+     const userData = { emri, mbiemri, emaili, ditelindja, pesha, gjatesia };
+     await AsyncStorage.setItem("userData", JSON.stringify(userData));
+    // Kalo në faqen e profilit (ose dashboard)
+    router.push("/profile");
+  } catch (error) {
+    console.error("Gabim gjatë regjistrimit:", error);
+    alert("Ndodhi një gabim gjatë regjistrimit.");
+  }
+};
+
+
+  return (
+    <View style={styles.container}>
+      <Image source={require("../../assets/logo.jpg")} style={styles.logo} />
+>>>>>>> c5bff4695c1646389c1fce4b31d95ce9c786191f
 
 //       <Text style={styles.title}>Regjistrohu</Text>
 
