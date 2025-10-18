@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { useRouter } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage"; // ⬅️ kjo është e rëndësishme
 
 export const unstable_settings = { 
   headerShown: false, 
@@ -13,6 +14,14 @@ export default function LogIn() {
   const [fjalekalimi, setFjalekalimi] = useState("");
   const [show, setShow] = useState(false);
 
+  // 🧹 Fshin të dhënat e ruajtura vetëm për testim
+  useEffect(() => {
+    const clearData = async () => {
+      await AsyncStorage.clear();
+      console.log("AsyncStorage u pastrua me sukses!");
+    };
+    clearData();
+  }, []);
 
   const handleLogIn = () => {
     console.log("User Logged in:", { perdoruesi, fjalekalimi });
@@ -32,33 +41,31 @@ export default function LogIn() {
         onChangeText={setPerdoruesi}
       />
 
-       <TextInput
+      <TextInput
         style={styles.input}
         placeholder="Fjalekalimi"
         placeholderTextColor="#2e7d32"
         secureTextEntry={!show}
         value={fjalekalimi}
         onChangeText={setFjalekalimi}
-        />
-        <Text
-          onPress={() => setShow(!show)}
-          style={{ color: "#2e7d32", alignSelf: "flex-end", marginTop: 5 }}
-           >
-          {show ? "Fshih" : "Shfaq"}
-        </Text>
-
+      />
+      <Text
+        onPress={() => setShow(!show)}
+        style={{ color: "#2e7d32", alignSelf: "flex-end", marginTop: 5 }}
+      >
+        {show ? "Fshih" : "Shfaq"}
+      </Text>
 
       <TouchableOpacity style={styles.button} onPress={handleLogIn}>
         <Text style={styles.buttonText}>HYR</Text>
       </TouchableOpacity>
 
       <Text style={{ marginTop: 15, color: "#2e7d32" }}>
-         S'keni nje llogari?{" "}
-          <Text onPress={() => router.push("/signup")} style={{ fontWeight: "bold" }}>
-            Regjistrohu
-          </Text>
+        S'keni një llogari?{" "}
+        <Text onPress={() => router.push("/signup")} style={{ fontWeight: "bold" }}>
+          Regjistrohu
+        </Text>
       </Text>
-
     </View>
   );
 }
@@ -67,7 +74,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#e6f2e6", 
+    backgroundColor: "#e6f2e6",
     padding: 20,
   },
   logo: {
@@ -80,7 +87,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "bold",
-    color: "#2e7d32", 
+    color: "#2e7d32",
     marginBottom: 25,
   },
   input: {
@@ -91,7 +98,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderColor: "#2e7d32",
     borderWidth: 1,
-    color: "#2e7d32", 
+    color: "#2e7d32",
   },
   button: {
     width: "100%",
@@ -102,7 +109,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonText: {
-    color: "#e6f2e6", 
+    color: "#e6f2e6",
     fontSize: 16,
     fontWeight: "bold",
   },
