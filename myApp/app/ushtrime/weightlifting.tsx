@@ -45,7 +45,7 @@ export default function WeightliftingScreen() {
     { title: 'Plank', icon: 'yoga' },
   ];
 
-  // ==== Pjesa e llogaritjes ====
+ 
   const [selectedExercise, setSelectedExercise] = useState(EXERCISES[0].title);
   const [minutes, setMinutes] = useState(30);
   const [calories, setCalories] = useState<number | null>(null);
@@ -116,7 +116,7 @@ export default function WeightliftingScreen() {
           </TouchableOpacity>
         </View>
 
-        {/* Krejt faqja scrollable */}
+    
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 40 }}>
           {/* Lista e ushtrimeve */}
           {EXERCISES.map((item, i) => (
@@ -129,10 +129,10 @@ export default function WeightliftingScreen() {
             </View>
           ))}
 
-          {/* Hapësirë mes listës dhe pjesës poshtë */}
+     
           <View style={{ height: 30 }} />
 
-          {/* ==== Zgjedh ushtrimin & llogarit kaloritë ==== */}
+       
           <View style={styles.card}>
             <Text style={styles.label}>Zgjedh çka ke ushtru sot</Text>
             <Picker
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   tabText: { fontWeight: '700', letterSpacing: 0.3, color: COLORS.textDark },
   tabTextActive: { color: '#fff' },
 
-  // Ushtrimet
+
   rowCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -260,4 +260,5 @@ const styles = StyleSheet.create({
     color: COLORS.textDark,
   },
 });
+
 
