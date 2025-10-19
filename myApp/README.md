@@ -6,45 +6,7 @@ React Native – për zhvillimin e aplikacionit mobil ndër-platformë
 TypeScript (TSX) – për tipizim të fortë dhe strukturë më të qëndrueshme të kodit
 Expo – për testim dhe ndërtim të shpejtë të aplikacionit
 React Navigation – për menaxhimin e faqeve dhe tab-eve
-Hooks & Components Architecture – për modularitet dhe mirëmbajtje të lehtë të kodit
 
-Struktura e Projektit
-myApp/
-├── app/
-│   ├── (tabs)/
-│   │   ├── _layout.tsx
-│   │   ├── dashboard.tsx
-│   │   ├── profile.tsx
-│   │   ├── ushqime.tsx
-│   │   └── ushtrime.tsx
-│   ├── auth/
-│   │   ├── _layout.tsx
-│   │   └── login.tsx
-│   ├── plans/
-│   │   ├── _layout.tsx
-│   │   ├── humb_pesh.tsx
-│   │   ├── mbaj_pesh.tsx
-│   │   └── shto_pesh.tsx
-│   ├── ushtrime/
-│   │   ├── homeworkout.tsx
-│   │   ├── weightlifting.tsx
-│   │   ├── _layout.tsx
-│   │   └── index.tsx
-│   ├── login.tsx
-│   ├── signup.tsx
-│   └── index.tsx
-├── components/
-│   └── ui/
-│       ├── external-link.tsx
-│       ├── haptic-tab.tsx
-│       ├── hello-wave.tsx
-│       ├── parallax-scroll-view.tsx
-│       ├── themed-text.tsx
-│       └── themed-view.tsx
-├── assets/
-├── constants/
-├── hooks/
-└── .vscode/
 
  Udhëzime për Ekzekutim
 Klono repository-n:
