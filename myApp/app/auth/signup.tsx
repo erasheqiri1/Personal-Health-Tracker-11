@@ -1,3 +1,6 @@
+import { FontAwesome5 } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Stack, router } from 'expo-router';
 import React, { useState } from 'react';
 import {
   ActionSheetIOS,
@@ -10,9 +13,6 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Stack, router } from 'expo-router';
 
 type User = {
   emri: string;
@@ -127,7 +127,7 @@ export default function Signup() {
 
       <View style={s.brand}>
         <View style={s.runCircle}>
-          {/* E bardhë explicit që të mos bëhet e zezë */}
+     
           <FontAwesome5 name="running" size={56} color="#FFFFFF" />
         </View>
         <Text style={s.brandTitle}>Personal Health Tracker</Text>

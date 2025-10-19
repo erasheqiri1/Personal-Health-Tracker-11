@@ -1,8 +1,10 @@
 
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
-import { useRouter } from 'expo-router';
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 export default function UshtrimeScreen() {
   const router = useRouter();
@@ -58,7 +60,7 @@ export default function UshtrimeScreen() {
         </View>
 
         <View style={styles.cardsRow}>
-          {/* Karta: Weightlifting */}
+ 
           <TouchableOpacity
             activeOpacity={0.88}
             style={[styles.card, { width: '46%', aspectRatio: 0.62 }]}
@@ -68,7 +70,7 @@ export default function UshtrimeScreen() {
             <Text style={styles.cardText}>WEIGHT-{"\n"}LIFTING</Text>
           </TouchableOpacity>
 
-          {/* Karta: Home Workout */}
+       
           <TouchableOpacity
             activeOpacity={0.88}
             style={[styles.card, { width: '46%', aspectRatio: 0.62 }]}

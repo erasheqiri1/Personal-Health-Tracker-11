@@ -1,8 +1,8 @@
 
-import React, { useState, useCallback } from "react";
-import { View, Text, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "expo-router";
+import React, { useCallback, useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 const COLORS = {
   green: "#355E3B",
@@ -15,7 +15,7 @@ const COLORS = {
 export default function HealthWidgets({
   steps = 5432,
   stepGoal = 8000,
-  sleepMinutes = 465, // 7h 45m
+  sleepMinutes = 465, 
 }) {
   const [foodCalories, setFoodCalories] = useState(0);
   const [workoutCalories, setWorkoutCalories] = useState(0);
@@ -58,7 +58,7 @@ export default function HealthWidgets({
   return (
     <View style={[styles.container, { backgroundColor: COLORS.page }]}>
       <View style={styles.cards}>
-        {/* Step Tracker */}
+        {/*numrues hapash*/}
         <View style={[styles.cardBase, styles.cardTall]}>
           <Text style={styles.title}>Gjurmues i hapave</Text>
           <View style={styles.circleWrap}>
@@ -148,16 +148,15 @@ const styles = StyleSheet.create({
   },
   lastCard: { marginBottom: 0 },
 
-  // pak më të vogla
-  cardTall: { minHeight: 240 },   // ishte 260
-  cardSmall: { minHeight: 135 },  // ishte 150
+  cardTall: { minHeight: 240 }, 
+  cardSmall: { minHeight: 135 }, 
 
   title: { fontSize: 15, color: COLORS.textDark, marginBottom: 6, fontWeight: "700" },
 
-  // Step circle
+
   circleWrap: { alignItems: "center", justifyContent: "center", flex: 1 },
   progressCircle: {
-    width: 150,  // pak më e vogël
+    width: 150,  
     height: 150,
     borderRadius: 75,
     justifyContent: "center",
@@ -184,13 +183,13 @@ const styles = StyleSheet.create({
   stepCount: { fontSize: 26, fontWeight: "bold", color: COLORS.green },
   stepLabel: { fontSize: 13, color: COLORS.textDark },
 
-  // Gjumi
+
   sleepRow: { flexDirection: "row", alignItems: "center" },
   moon: { fontSize: 32, color: COLORS.green, marginRight: 10 },
   sleepTime: { fontSize: 20, fontWeight: "bold", color: COLORS.green },
   sleepLabel: { fontSize: 13, color: COLORS.textDark },
 
-  // Kaloritë
+
   calRow: { flexDirection: "row", alignItems: "center" },
   fire: { fontSize: 30, marginRight: 10 },
   calNum: { fontSize: 20, fontWeight: "bold", color: COLORS.green },

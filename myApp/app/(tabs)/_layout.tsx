@@ -1,5 +1,5 @@
-import { Tabs } from 'expo-router';
 import { FontAwesome } from '@expo/vector-icons';
+import { Tabs } from 'expo-router';
 
 export default function TabsLayout() {
   return (
@@ -14,15 +14,14 @@ export default function TabsLayout() {
           letterSpacing: 1,
         },
         tabBarStyle: {
-          backgroundColor: '#EAE7D6', // ngjyra e footer-it
-          height: 70,
+          backgroundColor: '#EAE7D6', 
           borderTopWidth: 0,
           elevation: 5,
           position: 'absolute',
           bottom: 0,
           left: 0,
           right: 0,
-          paddingBottom: 0, // e ul komplet poshtë
+          paddingBottom: 0, 
         },
         tabBarLabelStyle: {
           fontSize: 12,

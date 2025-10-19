@@ -1,14 +1,21 @@
 
 import React, { useState } from 'react';
 import {
-  SafeAreaView, View, Text, TouchableOpacity, StyleSheet, Dimensions,
-  ScrollView, Alert
+  Alert,
+  Dimensions,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from '@react-native-picker/picker';
 import { useRouter } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeWorkoutScreen() {
   const router = useRouter();
@@ -52,7 +59,7 @@ export default function HomeWorkoutScreen() {
   const [calories, setCalories] = useState<number | null>(null);
 
   const calcCalories = async () => {
-    const total = minutes * 8; // 8 kcal/min
+    const total = minutes * 8;
     setCalories(total);
 
     const today = new Date().toISOString().slice(0, 10);

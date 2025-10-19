@@ -1,20 +1,21 @@
 
 import React, { useState } from 'react';
 import {
-  SafeAreaView,
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
+  Alert,
   Dimensions,
   ScrollView,
-  Alert,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from '@react-native-picker/picker';
 import { useRouter } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function WeightliftingScreen() {
   const router = useRouter();
@@ -51,7 +52,7 @@ export default function WeightliftingScreen() {
   const [calories, setCalories] = useState<number | null>(null);
 
   const calcCalories = async () => {
-    const total = minutes * 6; // thjeshtëzim: 6 kcal/min për peshë
+    const total = minutes * 6; 
     setCalories(total);
 
     const today = new Date().toISOString().slice(0, 10);
@@ -71,7 +72,7 @@ export default function WeightliftingScreen() {
 
   return (
     <SafeAreaView style={styles.safe}>
-      {/* Background */}
+
       <View style={styles.bgLayer} pointerEvents="none">
         {BG_ICONS.map((icon, i) => {
           const size = Math.round(Math.min(W, H) * icon.sizeMul);
@@ -94,7 +95,7 @@ export default function WeightliftingScreen() {
       </View>
 
       <View style={[styles.container, { paddingTop: Math.max(12, insets.top * 0.3) }]}>
-        {/* Header */}
+
         <View style={styles.headerRow}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
             <MaterialCommunityIcons name="chevron-left" size={26} color="#fff" />
@@ -103,7 +104,6 @@ export default function WeightliftingScreen() {
           <View style={{ width: 36 }} />
         </View>
 
-        {/* Tabs */}
         <View style={styles.tabs}>
           <View style={[styles.tab, styles.tabActive]}>
             <Text style={[styles.tabText, styles.tabTextActive]}>Weightlifting</Text>
@@ -118,7 +118,7 @@ export default function WeightliftingScreen() {
 
     
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 40 }}>
-          {/* Lista e ushtrimeve */}
+ 
           {EXERCISES.map((item, i) => (
             <View key={i} style={styles.rowCard}>
               <View style={styles.rowIconWrap}>
@@ -236,7 +236,6 @@ const styles = StyleSheet.create({
   },
   rowTitle: { flex: 1, fontSize: 17, fontWeight: '800', color: COLORS.textDark },
 
-  // Pjesa e llogaritjes poshtë
   card: {
     backgroundColor: COLORS.cardSoft,
     borderRadius: 16,

@@ -1,17 +1,18 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import {
-  SafeAreaView,
   KeyboardAvoidingView,
   Platform,
-  View,
-  Text,
-  TextInput,
   Pressable,
   StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from 'react-native';
-import { router, useNavigation } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 import Checkbox from 'expo-checkbox';
+import { router, useNavigation } from 'expo-router';
 
 export default function Login() {
   const [showPass, setShowPass] = useState(false);
@@ -29,13 +30,13 @@ export default function Login() {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
         <View style={s.container}>
-          {/* LOGO */}
+  
           <View style={s.logoWrap}>
             <RunIcon />
             <Text style={s.appTitle}>PERSONAL{'\n'}HEALTH{'\n'}TRACKER</Text>
           </View>
 
-          {/* INPUTS */}
+ 
           <View style={s.form}>
             <TextInput
               placeholder="Përdoruesi"
@@ -65,7 +66,7 @@ export default function Login() {
               </Pressable>
             </View>
 
-            {/* REMEMBER ME */}
+     
             <View style={s.rememberWrap}>
               <Checkbox
                 value={rememberMe}
@@ -83,7 +84,7 @@ export default function Login() {
             </Pressable>
           </View>
 
-          {/* FOOTER LINK */}
+    
           <Text style={s.footer}>
             S’keni një llogari?{' '}
             <Text style={s.footerLink} onPress={() => router.push('/auth/signup')}>
@@ -96,7 +97,6 @@ export default function Login() {
   );
 }
 
-// Ikona “running” në rreth të gjelbër (e zmadhuar)
 function RunIcon() {
   return (
     <View style={s.runCircle}>
@@ -114,11 +114,10 @@ const s = StyleSheet.create({
     gap: 12,
   },
 
-  // Ngritje më e madhe e logos
   logoWrap: {
     alignItems: 'center',
     marginBottom: 20,
-    transform: [{ translateY: -80 }], // më lart se më parë
+    transform: [{ translateY: -80 }], 
   },
 
   appTitle: {
@@ -150,7 +149,7 @@ const s = StyleSheet.create({
   },
   eyeBtn: { position: 'absolute', right: 14, top: 14 },
 
-  // REMEMBER ME
+
   rememberWrap: {
     flexDirection: 'row',
     alignItems: 'center',
