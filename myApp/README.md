@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+Projekti Personal Health Tracker është një aplikacion mobil i zhvilluar për të ndihmuar përdoruesit në menaxhimin e shëndetit të tyre personal, duke përfshirë planifikimin e ushqimeve, ndjekjen e ushtrimeve fizike dhe monitorimin e peshës trupore.
+Aplikacioni mundëson autentikim të përdoruesve dhe ofron ndërfaqe të qartë, funksionale dhe lehtësisht të përdorshme për menaxhimin e planeve personale shëndetësore.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Teknologjitë e Përdorura
+React Native – për zhvillimin e aplikacionit mobil ndër-platformë
+TypeScript (TSX) – për tipizim të fortë dhe strukturë më të qëndrueshme të kodit
+Expo – për testim dhe ndërtim të shpejtë të aplikacionit
+React Navigation – për menaxhimin e faqeve dhe tab-eve
+Hooks & Components Architecture – për modularitet dhe mirëmbajtje të lehtë të kodit
 
-## Get started
+Struktura e Projektit
+myApp/
+├── app/
+│   ├── (tabs)/
+│   │   ├── _layout.tsx
+│   │   ├── dashboard.tsx
+│   │   ├── profile.tsx
+│   │   ├── ushqime.tsx
+│   │   └── ushtrime.tsx
+│   ├── auth/
+│   │   ├── _layout.tsx
+│   │   └── login.tsx
+│   ├── plans/
+│   │   ├── _layout.tsx
+│   │   ├── humb_pesh.tsx
+│   │   ├── mbaj_pesh.tsx
+│   │   └── shto_pesh.tsx
+│   ├── ushtrime/
+│   │   ├── homeworkout.tsx
+│   │   ├── weightlifting.tsx
+│   │   ├── _layout.tsx
+│   │   └── index.tsx
+│   ├── login.tsx
+│   ├── signup.tsx
+│   └── index.tsx
+├── components/
+│   └── ui/
+│       ├── external-link.tsx
+│       ├── haptic-tab.tsx
+│       ├── hello-wave.tsx
+│       ├── parallax-scroll-view.tsx
+│       ├── themed-text.tsx
+│       └── themed-view.tsx
+├── assets/
+├── constants/
+├── hooks/
+└── .vscode/
 
-1. Install dependencies
+ Udhëzime për Ekzekutim
+Klono repository-n:
+git clone https://github.com/personal-health-tracker.git
 
-   ```bash
-   npm install
-   ```
+Hyr në dosjen e projektit:
+cd myApp
 
-2. Start the app
+Instalo varësitë:
+npm install
 
-   ```bash
-   npx expo start
-   ```
+Nise aplikacionin:
+npx expo start
 
-In the output, you'll find options to open the app in a
+Skanoni QR kodin me aplikacionin Expo Go për ta testuar në pajisjen tuaj.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Anëtarët e Grupit:
+Aurorë Smirqaku
+Era Sheqiri
+Artin Dulahi
+Emir Bislimi
+Ulp Bellaqa
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Projekti është zhvilluar në kuadër të lëndës së Zhvillimit të Aplikacioneve Mobile, si pjesë e studimeve në Fakultetin e Inxhinierisë Elektike dhe Kompjuterike në Universitetin e Prishtinës.
