@@ -150,7 +150,7 @@ export default function AdminHome() {
   onPress={async () => {
     try {
       await signOut(auth);       // del prej Firebase
-      router.replace('/auth/login');  // direkt te login
+      router.replace('/(auth)/login');  // direkt te login
     } catch (e) {
       console.log('Logout error:', e);
     }

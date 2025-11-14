@@ -983,13 +983,14 @@ export default function HomeWorkoutScreen() {
           ) : (
             exercises.map(item => (
               <View key={item.id} style={styles.rowCard}>
-                <View style={styles.rowIconWrap}>
-                  <MaterialCommunityIcons
-                    name={item.icon || 'arm-flex'}
-                    size={44}
-                    color={COLORS.green}
-                  />
-                </View>
+               <View style={styles.rowIconWrap}>
+  <MaterialCommunityIcons
+    name={item.icon}   // vetëm prej Firestore, pa default
+    size={44}
+    color={COLORS.green}
+  />
+</View>
+
 
                 <View style={{ flex: 1 }}>
                   <Text style={styles.rowTitle}>{item.title}</Text>
@@ -1144,3 +1145,5 @@ const styles = StyleSheet.create({
     color: COLORS.textDark,
   },
 });
+
+
