@@ -269,13 +269,14 @@
 // });
 
 
-//me logjik te re
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
-  Alert,
+  Alert, // ⬅️ SHTO KËTË
+  Image,
   Platform,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -285,7 +286,10 @@ import {
 } from 'react-native';
 
 import {
+  FacebookAuthProvider,
+  GithubAuthProvider,
   GoogleAuthProvider,
+  OAuthProvider,
   linkWithPopup,
   signOut,
   updateProfile,
@@ -409,27 +413,59 @@ export default function Profile() {
 
   const handleLogout = async () => {
     await signOut(auth);
-    router.replace('/auth/login');
+    router.replace('/(auth)/login');
   };
 
-  const handleLinkGoogle = async () => {
+  // -----------------------------
+  //  LIDHJA E LLOGARIVE SOCIALE
+  // -----------------------------
+  const linkSocialAccount = async (provider, providerName) => {
     try {
       const user = auth.currentUser;
       if (!user) return;
 
       if (Platform.OS !== 'web') {
-        Alert.alert('Info', 'Lidhja me Google funksionon vetëm në web.');
+        Alert.alert(
+          'Info',
+          `Lidhja me ${providerName} funksionon vetëm në web.`
+        );
         return;
       }
 
-      const provider = new GoogleAuthProvider();
       await linkWithPopup(user, provider);
-      Alert.alert('Sukses', 'Llogaria u lidh me Google.');
+      Alert.alert('Sukses', `Llogaria u lidh me ${providerName}.`);
     } catch (e) {
-      console.log('link google error:', e);
-      Alert.alert('Gabim', 'Nuk u lidh llogaria me Google.');
+      console.log(`link ${providerName} error:`, e);
+
+      if (e.code === 'auth/provider-already-linked') {
+        Alert.alert('Info', `${providerName} është veç i lidhur me llogarinë.`);
+      } else if (e.code === 'auth/credential-already-in-use') {
+        Alert.alert(
+          'Gabim',
+          `Kjo llogari ${providerName} është e lidhur me një përdorues tjetër.`
+        );
+      } else if (e.code === 'auth/requires-recent-login') {
+        Alert.alert(
+          'Gabim',
+          'Lidhja kërkon që të kycësh përsëri. Dil dhe hy prapë, pastaj provo përsëri.'
+        );
+      } else {
+        Alert.alert('Gabim', `Nuk u lidh llogaria me ${providerName}.`);
+      }
     }
   };
+
+  const handleLinkGoogle = () =>
+    linkSocialAccount(new GoogleAuthProvider(), 'Google');
+
+  const handleLinkMicrosoft = () =>
+    linkSocialAccount(new OAuthProvider('microsoft.com'), 'Microsoft');
+
+  const handleLinkGitHub = () =>
+    linkSocialAccount(new GithubAuthProvider(), 'GitHub');
+
+  const handleLinkFacebook = () =>
+    linkSocialAccount(new FacebookAuthProvider(), 'Facebook');
 
   if (loading) {
     return (
@@ -486,14 +522,44 @@ export default function Profile() {
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={[styles.button, { backgroundColor: COLORS.cardSoft, marginTop: 10 }]}
-        onPress={handleLinkGoogle}
-      >
-        <Text style={[styles.buttonText, { color: COLORS.textDark }]}>
-          Lidhe Google me llogarinë time
-        </Text>
-      </TouchableOpacity>
+      {/* Butonat për lidhje sociale */}
+      <Text style={{ 
+  marginTop: 16,
+  marginBottom: 8,
+  fontSize: 16,
+  fontWeight: '600',
+  color: COLORS.textDark 
+}}>
+  Dëshironi të lidheni llogarin tuaj aktuale me:
+</Text>
+
+<View style={{
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: 16,
+  marginBottom: 8
+}}>
+  <Pressable style={styles.socialBtn} onPress={handleLinkGoogle}>
+    <Image
+      source={require('../../assets/icons/google.png')}
+      style={{ width: 24, height: 24, resizeMode: 'contain' }}
+    />
+  </Pressable>
+
+  <Pressable style={styles.socialBtn} onPress={handleLinkMicrosoft}>
+    <FontAwesome5 name="microsoft" size={22} color="#0078D4" />
+  </Pressable>
+
+  <Pressable style={styles.socialBtn} onPress={handleLinkGitHub}>
+    <FontAwesome5 name="github" size={22} color="#000" />
+  </Pressable>
+
+  <Pressable style={styles.socialBtn} onPress={handleLinkFacebook}>
+    <FontAwesome5 name="facebook" size={22} color="#1877F2" />
+  </Pressable>
+</View>
+
 
       <TouchableOpacity
         style={[styles.logoutButton, { borderColor: COLORS.green }]}
@@ -559,6 +625,17 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
+  socialBtn: {
+  width: 48,
+  height: 48,
+  borderRadius: 24,
+  backgroundColor: COLORS.cardSoft,
+  borderWidth: 1,
+  borderColor: COLORS.border,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+
   buttonText: { fontSize: 16, fontWeight: 'bold' },
   logoutButton: {
     marginTop: 12,
