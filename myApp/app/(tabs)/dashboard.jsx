@@ -14,8 +14,8 @@ import {
 
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, db } from "../../firebaseConfig";
-import { getRecipeOfDay, searchRecipeWithDetails, } from "../../services/receta";
-import { useWeather } from "../../services/weather";
+import { getRecipeOfDay, searchRecipeWithDetails, } from "../../services/mealsAPI";
+import { useWeather } from "../../services/weatherAPI";
 
 const COLORS = {
   green: "#355E3B",
