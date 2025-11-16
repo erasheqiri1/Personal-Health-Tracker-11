@@ -8,22 +8,24 @@
 
 ### Admin View
 <p align="center">
-<img src="myApp/assets/foto1.PNG" width ="200}"/>
-<img src="myApp/assets/foto2.PNG" width ="200}"/>
-<img src="myApp/assets/foto3.PNG" width ="200}"/>
-<img src="myApp/assets/foto4.PNG" width ="200}"/>
+  <img src="myApp/assets/foto1.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto2.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto3.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto4.PNG" width="220" height="400"/>
 </p>
+
 
 ### User View
 <p align="center">
-<img src="myApp/assets/foto5.PNG" width ="100}"/>
-<img src="myApp/assets/foto6.PNG" width ="100}"/>
-<img src="myApp/assets/foto7.PNG" width ="100}"/>
-<img src="myApp/assets/foto8.PNG" width ="100}"/>
-<img src="myApp/assets/foto9.PNG" width ="100}"/>
-<img src="myApp/assets/foto10.PNG" width ="100}"/>
-<img src="myApp/assets/foto11.PNG" width ="100}"/>
+  <img src="myApp/assets/foto5.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto6.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto7.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto8.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto9.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto10.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto11.PNG" width="100" height="210"/>
 </p>
+
 ----------------------------------------------------------------------------------------------------------
 
 ## ⭐ Features
