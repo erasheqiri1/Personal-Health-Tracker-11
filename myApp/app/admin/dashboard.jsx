@@ -43,14 +43,14 @@ export default function AdminHome() {
           icon={<FontAwesome5 name="utensils" size={32} color={COLORS.green} />}
           title="Menaxho planet e ushqimit"
           subtitle="Shto, ndrysho ose fshij planet e ushqimit për përdoruesit (shto pesh, humb pesh & mbaj pesh)."
-          onPress={() => router.push("/admin/ushqime")}
+          onPress={() => router.push("/admin/meal")}
         />
 
         <AdminCard
           icon={<FontAwesome5 name="dumbbell" size={32} color={COLORS.green} />}
           title="Menaxho planet e ushtrimeve"
           subtitle="Shto ushtrime të reja, ndrysho detajet ose fshij planet (homeworkout & weightlifting)."
-          onPress={() => router.push("/admin/ushtrime")}
+          onPress={() => router.push("/admin/workout")}
         />
 
         <Pressable style={styles.logoutBtn} onPress={handleLogout}>

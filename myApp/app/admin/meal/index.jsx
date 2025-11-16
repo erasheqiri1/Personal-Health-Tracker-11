@@ -1,4 +1,3 @@
-
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Stack, router } from "expo-router";
 import React from "react";
@@ -10,12 +9,12 @@ const COLORS = {
   bg: "#F7F4E9",
 };
 
-export default function AdminUshtrime() {
+export default function AdminUshqime() {
   return (
     <View style={s.container}>
       <Stack.Screen
         options={{
-          title: "Admin – Ushtrimet",
+          title: "Admin – Plane ushqimi",
           headerStyle: { backgroundColor: COLORS.green },
           headerTintColor: "#fff",
           headerTitleStyle: { fontWeight: "bold" },
@@ -25,17 +24,24 @@ export default function AdminUshtrime() {
       <Text style={s.title}>Zgjidh planin për ta menaxhuar:</Text>
 
       <AdminOptionCard
-        icon={<FontAwesome5 name="home" size={28} color={COLORS.green} />}
-        title="Home Workout"
-        subtitle="Menaxho ushtrimet e planit Home Workout."
-        onPress={() => router.push("/admin/ushtrime/homeworkout")}
+        icon={<FontAwesome5 name="weight" size={28} color={COLORS.green} />}
+        title="Shto Peshë"
+        subtitle="Menaxho ushqimet e planit Shto Peshë."
+        onPress={() => router.push("/admin/meal/gain_weight")}
       />
 
       <AdminOptionCard
-        icon={<FontAwesome5 name="dumbbell" size={28} color={COLORS.green} />}
-        title="Weightlifting"
-        subtitle="Menaxho ushtrimet e planit Weightlifting."
-        onPress={() => router.push("/admin/ushtrime/weightlifting")}
+        icon={<FontAwesome5 name="running" size={28} color={COLORS.green} />}
+        title="Humb Peshë"
+        subtitle="Menaxho ushqimet e planit Humb Peshë."
+        onPress={() => router.push("/admin/meal/lose_weight")}
+      />
+
+      <AdminOptionCard
+        icon={<FontAwesome5 name="heartbeat" size={28} color={COLORS.green} />}
+        title="Mbaj Peshën"
+        subtitle="Menaxho ushqimet e planit Mbaj Peshën."
+        onPress={() => router.push("/admin/meal/maintain_weight")}
       />
     </View>
   );

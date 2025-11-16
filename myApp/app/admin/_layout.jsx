@@ -24,11 +24,11 @@ export default function AdminLayout() {
       />
 
       <Stack.Screen
-        name="ushqime"
+        name="workout"
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="ushtrime"
+        name="meal"
         options={{ headerShown: false }}
       />
     </Stack>
