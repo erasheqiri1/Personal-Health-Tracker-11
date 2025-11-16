@@ -50,7 +50,7 @@ export default function Login() {
 
     if (userEmail === adminEmail) {
     //kur eshte admin
-      router.replace('/admin/dashboard');
+      router.replace('/(admin)/dashboard');
     } else {
       // kur eshte user normal
       router.replace('/(tabs)/dashboard');

@@ -28,14 +28,14 @@ export default function AdminUshtrime() {
         icon={<FontAwesome5 name="home" size={28} color={COLORS.green} />}
         title="Home Workout"
         subtitle="Menaxho ushtrimet e planit Home Workout."
-        onPress={() => router.push("/admin/workout/homeworkout")}
+        onPress={() => router.push("/(admin)/workout/homeworkout")}
       />
 
       <AdminOptionCard
         icon={<FontAwesome5 name="dumbbell" size={28} color={COLORS.green} />}
         title="Weightlifting"
         subtitle="Menaxho ushtrimet e planit Weightlifting."
-        onPress={() => router.push("/admin/workout/weightlifting")}
+        onPress={() => router.push("/(admin)/workout/weightlifting")}
       />
     </View>
   );

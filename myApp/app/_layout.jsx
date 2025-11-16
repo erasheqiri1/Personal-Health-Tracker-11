@@ -9,7 +9,7 @@ export default function RootLayout() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
 
       {/* Grupi i auth (login, signup) */}
-      <Stack.Screen name="auth" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
 
       {/* Planet e ushqimit (shto_pesh, humb_pesh, mbaj_pesh) */}
       <Stack.Screen name="plans" options={{ headerShown: false }} />
@@ -18,7 +18,7 @@ export default function RootLayout() {
       <Stack.Screen name="ushtrime" options={{ headerShown: false }} />
 
       {/* Zona e adminit (admin/dashboard, admin/ushqime, admin/ushtrime, ...) */}
-      <Stack.Screen name="admin" options={{ headerShown: false }} />
+      <Stack.Screen name="(admin)" options={{ headerShown: false }} />
     </Stack>
   );
 }
