@@ -17,16 +17,18 @@
 
 ### User View
 <p align="center">
-  <img src="myApp/assets/foto5.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto6.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto7.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto8.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto9.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto10.PNG" width="100" height="210"/>
-  <img src="myApp/assets/foto11.PNG" width="100" height="210"/>
+  <img src="myApp/assets/foto5.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto6.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto7.PNG" width="220" height="400"/>
+  <img src="myApp/assets/foto8.PNG" width="220" height="400"/>
 </p>
-
-----------------------------------------------------------------------------------------------------------
+<p align="center">
+  <img src="myApp/assets/foto9.PNG" width="190" height="400"/>
+  <img src="myApp/assets/foto10.PNG" width="190" height="400"/>
+  <img src="myApp/assets/foto11.PNG" width="190" height="400"/>
+    <img src="myApp/assets/foto12.PNG" width="190" height="400"/>
+    <img src="myApp/assets/foto13.PNG" width="190" height="400"/>
+</p>
 
 ## ⭐ Features
 
@@ -37,6 +39,6 @@
 - **State Management** – Trajtim i gjendjeve `loading`, `error` dhe `success`
 - **External API Integration (** – Mbështetje për API si OpenWeatherMap, TheMealDB.
 - **Navigation** – Navigim i plotë dhe i thjeshtëzuar me **expo-router**
-- **User Interface** – Dizajn i pastër, layout i rregulluar, ngjyra konsistente dhe strukturë profesionale (`app/`, `components/`, `firebase/`, `assets/`)
+- **User Interface** – Dizajn i pastër, layout i rregulluar, ngjyra konsistente dhe strukturë profesionale 
 
 ------------------------------------------------------------------------------------------------------------------
