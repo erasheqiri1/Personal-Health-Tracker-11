@@ -30,4 +30,80 @@
     <img src="myApp/assets/foto13.PNG" width="190" height="400"/>
 </p>
 
+## ⭐ Features (të zgjeruara)
 
+### 🔐 Authentication & User Security
+- Firebase Email/Password  
+- Social Logins (Web): Google, Microsoft, GitHub, Facebook  
+- Password Reset + Email Verification  
+- Session Persistence (përdoruesi mbetet i kyçur edhe pas restart)  
+
+---
+
+### 🧠 State Management & Logic
+- `useState`, `useEffect`, `useRouter`  
+- Handling errors, loading, async operations  
+- Data sync me Firebase Firestore
+
+  ---
+### 🥗 Food Tracking
+- Regjistrim i vakteve ditore  
+- Llogaritje automatike e kalorive  
+- Shfaqje nutriente: protein, carbs, fats  
+- Skanim i barkodit ushqimor *(opsionale në të ardhmen)*  
+
+---
+### 💪 Workout Tracking
+- Regjistrim i ushtrimeve ditore  
+- Kalori të djegura  
+- Plane ushtrimesh sipas qëllimit  
+- Timer për ushtrimet
+
+- 
+### 😴 Sleep Monitoring
+- Orët e gjumit  
+- Kualiteti i gjumit  
+- Analiza javore + rekomandime  
+
+---
+
+### 🍳 Recipes API Integration
+- TheMealDB  
+- OpenWeatherMap (rekomandime sipas motit)  
+- Filtrim sipas dietës: vegan, keto, high-protein, low-carb  
+- Lista e preferencave (favorites)
+
+  
+### 🧭 Navigation (expo-router)
+- Layout i pastër  
+- Navigim i thjeshtë për çdo moshë  
+- Bottom Tabs + Stack Navigation  
+
+---
+
+## 🏗️ Tech Stack
+
+| Shtresa | Teknologjia |
+|--------|-------------|
+| Frontend | React Native (Expo) |
+| Routing | expo-router |
+| Backend | Firebase Firestore |
+| Auth | Firebase Authentication |
+| Hosting (Web) | Firebase Hosting |
+| API External | TheMealDB, OpenWeatherMap |
+| State | React Hooks |
+
+---
+
+
+## 📥 Install & Run
+
+```bash
+git clone <repo-url>
+cd myApp
+npm install
+npx expo start
+```
+
+Hapeni me:
+- **Web (Browser)**
