@@ -19,7 +19,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { db } from '../firebaseConfig'; // RREGULLO path-in nëse është ndryshe
+import { db } from '../firebaseConfig';
 
 const COLORS = {
   green: '#355E3B',

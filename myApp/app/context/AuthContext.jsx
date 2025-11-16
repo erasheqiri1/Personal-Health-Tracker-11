@@ -1,7 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../../firebaseConfig"; // sigurohu që emri është i saktë
-
+import { auth } from "../../firebaseConfig";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {

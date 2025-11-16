@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     color: COLORS.textDark,
     textAlign: "center",
     fontWeight: "900",
-    fontSize: 18,      // e njëjta madhësi si te ushtrimet
+    fontSize: 18,     
     marginTop: 10,
     lineHeight: 22,
     letterSpacing: 0.4,

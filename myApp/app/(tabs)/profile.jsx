@@ -144,7 +144,6 @@ export default function Profile() {
     router.replace('/(auth)/login');
   };
 
-  //  LIDHJA E LLOGARIVE SOCIALE
   const linkSocialAccount = async (provider, providerName) => {
     try {
       const user = auth.currentUser;

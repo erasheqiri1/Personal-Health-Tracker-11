@@ -15,7 +15,6 @@ export default function AdminLayout() {
         headerTitleStyle: { fontWeight: '600' },
       }}
     >
-      {/* Faqja e parë e adminit */}
       <Stack.Screen
         name="dashboard"
         options={{
@@ -24,7 +23,6 @@ export default function AdminLayout() {
         }}
       />
 
-      {/* KËTU E FSHEHIM HEADER-IN E JASHTËM */}
       <Stack.Screen
         name="ushqime"
         options={{ headerShown: false }}
