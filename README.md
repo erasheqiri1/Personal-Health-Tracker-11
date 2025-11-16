@@ -30,15 +30,4 @@
     <img src="myApp/assets/foto13.PNG" width="190" height="400"/>
 </p>
 
-## ⭐ Features
 
-- **Firebase Authentication** – Login & Signup me Email/Password + Google, Microsoft, GitHub & Facebook (Web only)
-- **Input Validation** – Verifikim i saktë i të dhënave gjatë regjistrimit dhe hyrjes
-- **Session Handling** – Auto-redirect në Home për përdoruesit e kyçur + funksion i plotë Logout
-- **Firebase CRUD (Firestore)** – Shtim, lexim, përditësim dhe fshirje të të dhënave me `useState` dhe `useEffect`
-- **State Management** – Trajtim i gjendjeve `loading`, `error` dhe `success`
-- **External API Integration (** – Mbështetje për API si OpenWeatherMap, TheMealDB.
-- **Navigation** – Navigim i plotë dhe i thjeshtëzuar me **expo-router**
-- **User Interface** – Dizajn i pastër, layout i rregulluar, ngjyra konsistente dhe strukturë profesionale 
-
-------------------------------------------------------------------------------------------------------------------
