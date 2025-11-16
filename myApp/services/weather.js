@@ -1,4 +1,3 @@
-// hooks/useWeather.js
 import * as Location from "expo-location";
 import { useEffect, useState } from "react";
 import { Platform } from "react-native";
