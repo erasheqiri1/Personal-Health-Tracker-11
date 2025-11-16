@@ -30,4 +30,18 @@
     <img src="myApp/assets/foto13.PNG" width="190" height="400"/>
 </p>
 
+## ⭐ Features (të zgjeruara)
+
+### 🔐 Authentication & User Security
+- Firebase Email/Password  
+- Social Logins (Web): Google, Microsoft, GitHub, Facebook  
+- Password Reset + Email Verification  
+- Session Persistence (përdoruesi mbetet i kyçur edhe pas restart)  
+
+---
+
+### 🧠 State Management & Logic
+- `useState`, `useEffect`, `useRouter`  
+- Handling errors, loading, async operations  
+- Data sync me Firebase Firestore  
 
