@@ -27,21 +27,21 @@ export default function AdminUshqime() {
         icon={<FontAwesome5 name="weight" size={28} color={COLORS.green} />}
         title="Shto Peshë"
         subtitle="Menaxho ushqimet e planit Shto Peshë."
-        onPress={() => router.push("/admin/ushqime/shto_pesh")}
+        onPress={() => router.push("/admin/ushqime/gain_weight")}
       />
 
       <AdminOptionCard
         icon={<FontAwesome5 name="running" size={28} color={COLORS.green} />}
         title="Humb Peshë"
         subtitle="Menaxho ushqimet e planit Humb Peshë."
-        onPress={() => router.push("/admin/ushqime/humb_pesh")}
+        onPress={() => router.push("/admin/ushqime/lose_weight")}
       />
 
       <AdminOptionCard
         icon={<FontAwesome5 name="heartbeat" size={28} color={COLORS.green} />}
         title="Mbaj Peshën"
         subtitle="Menaxho ushqimet e planit Mbaj Peshën."
-        onPress={() => router.push("/admin/ushqime/mbaj_pesh")}
+        onPress={() => router.push("/admin/ushqime/maintain_weight")}
       />
     </View>
   );

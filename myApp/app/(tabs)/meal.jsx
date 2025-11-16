@@ -56,7 +56,7 @@ export default function UshqimeScreen() {
             iconName="food-variant"
             title="Shto Peshë"
             subtitle="Kalori + proteina më të larta"
-            onPress={() => router.push("/plans/shto_pesh")}
+            onPress={() => router.push("/plans/gain_weight")}
             style={{ width: "46%", aspectRatio: 0.62 }}
           />
 
@@ -64,7 +64,7 @@ export default function UshqimeScreen() {
             iconName="leaf"
             title="Humb Peshë"
             subtitle="Deficit kalorie, volum ushqimi"
-            onPress={() => router.push("/plans/humb_pesh")}
+            onPress={() => router.push("/plans/lose_weight")}
             style={{ width: "46%", aspectRatio: 0.62 }}
           />
         </View>
@@ -74,7 +74,7 @@ export default function UshqimeScreen() {
             iconName="scale-balance"
             title="Mbaj Peshën"
             subtitle="Balanco kalori & makro"
-            onPress={() => router.push("/plans/mbaj_pesh")}
+            onPress={() => router.push("/plans/maintain_weight")}
             style={{ width: "46%", aspectRatio: 0.62 }}
           />
         </View>

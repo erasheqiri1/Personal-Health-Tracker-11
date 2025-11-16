@@ -42,16 +42,16 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="ushtrime"
+        name="workout"
         options={{
-          title: 'Ushtrime',
+          title: 'ushtrime',
           tabBarIcon: ({ size }) => (
             <FontAwesome name="heartbeat" size={size} color="#355E3B" />
           ),
         }}
       />
       <Tabs.Screen
-        name="ushqime"
+        name="meal"
         options={{
           title: 'Ushqime',
           tabBarIcon: ({ size }) => (

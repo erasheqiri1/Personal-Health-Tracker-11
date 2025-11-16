@@ -35,7 +35,7 @@ export default function AdminUshtrime() {
         icon={<FontAwesome5 name="dumbbell" size={28} color={COLORS.green} />}
         title="Weightlifting"
         subtitle="Menaxho ushtrimet e planit Weightlifting."
-        onPress={() => router.push("/admin/ushtrime/wightlifting")}
+        onPress={() => router.push("/admin/ushtrime/weightlifting")}
       />
     </View>
   );
