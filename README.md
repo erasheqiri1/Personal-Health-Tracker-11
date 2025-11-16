@@ -53,3 +53,8 @@
 - Skanim i barkodit ushqimor *(opsionale në të ardhmen)*  
 
 ---
+### 💪 Workout Tracking
+- Regjistrim i ushtrimeve ditore  
+- Kalori të djegura  
+- Plane ushtrimesh sipas qëllimit  
+- Timer për ushtrimet 
